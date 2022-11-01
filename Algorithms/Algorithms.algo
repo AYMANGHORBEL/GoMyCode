@@ -1,0 +1,32 @@
+ALGORITHM phrase
+VAR
+   a:STRING;
+   cunt:=0:INTEGER
+   word:STRING
+   countWord:=1:INTEGER
+BEGIN
+    read(a)
+    FOR i FROM 0 TO a.length-1 STEP  DO
+        IF (a[i]='a'
+            a[i]='e'
+            a[i]='o'
+            a[i]='u'
+            a[i]='y'   
+            a[i]='i' ) THEN
+            cunt = cunt+1
+        END_IF
+
+    END_FOR
+    write (cunt)
+    write (a.length)
+    read(word)
+    FOR i FROM 0 TO a.length STEP  DO
+
+        IF (a[i]==' ') THEN
+         countWord=countWord+1
+        END_IF
+    END_FOR
+    write(countWord)
+    
+
+END
