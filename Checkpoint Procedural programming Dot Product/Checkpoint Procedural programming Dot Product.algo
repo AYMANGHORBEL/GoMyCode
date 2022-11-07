@@ -1,0 +1,31 @@
+PROCEDURE dot_product(v1,v2:ARRAY_OF_INTEGER,ps:INTEGER)
+VAR
+    n:= v1.length-1
+    m:= v2.length-1
+    i:INTEGER
+BEGIN
+    IF (n<>m) THEN
+        write("cannot calculate the dot product")
+    END_IF
+
+   FOR i FROM 0 TO m STEP   DO
+    ps+= v1[i]*v2[i]
+   END_FOR
+IF (ps==0) THEN
+    write("the vectors are orthogonal")
+END_IF
+END
+// [  [],[],[],[]    ] 
+
+ALGORITHM orthogonal
+VAR
+    set : ARRAY_OF ARRAY
+    i,j: INTEGER
+    n : set.length-1
+BEGIN
+   FOR i FROM 0 TO n STEP   DO
+    FOR j FROM i+1 TO n STEP   DO
+        dot_product(set[i],set[j])
+    END_FOR
+   END_FOR
+END
